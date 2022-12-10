@@ -1,10 +1,6 @@
 <?php
 require "dbBroker.php";
-
-session_start();
-
-
-
+//session_start();
 
 ?>
 
@@ -34,7 +30,6 @@ session_start();
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
 <!--
 
-TemplateMo 579 Cyborg Gaming
 
 https://templatemo.com/tm-579-cyborg-gaming
 
@@ -79,10 +74,13 @@ https://templatemo.com/tm-579-cyborg-gaming
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                         <li><a href="index.html" class="active">Home</a></li>
+                        
                         <li><a href="browse.html">Browse</a></li>
                         <li><a href="details.html">Details</a></li>
                         <li><a href="streams.html">Streams</a></li>
+                        <li><a href="logout.php">Log out</a></li>
                         <li><a href="profile.html">Profile <img src="assets/images/profilna.jpg" alt=""></a></li>
+                       
                     </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>
