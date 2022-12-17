@@ -27,6 +27,7 @@ TemplateMo 579 Cyborg Gaming
 https://templatemo.com/tm-579-cyborg-gaming
 
 -->
+
   </head>
 
 <body>
@@ -65,11 +66,11 @@ https://templatemo.com/tm-579-cyborg-gaming
                     <!-- ***** Search End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="browse.html">Browse</a></li>
-                        <li><a href="details.html">Details</a></li>
-                        <li><a href="streams.html">Streams</a></li>
-                        <li><a href="profile.html" class="active">Profile <img src="assets/images/profilna.jpg" alt=""></a></li>
+                        <li><a href="home.php">Home</a></li>
+                        <li><a href="browse.php">Browse</a></li>
+                        <li><a href="details.php">Details</a></li>
+                        <li><a href="#">Streams</a></li>
+                        <li><a href="profile.php" class="active">Profile <img src="assets/images/profilna.jpg" alt=""></a></li>
                     </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -162,12 +163,27 @@ https://templatemo.com/tm-579-cyborg-gaming
               </div>
             </div>
           </div>
-          <!-- ***** Gaming Library End ***** -->
+          <!-- *****Library End ***** -->
         </div>
       </div>
     </div>
   </div>
   
+  <form class="unosknjiga" method="POST" action="#">
+            <h3>Login Here</h3>
+    
+            <label class = "labela" for="username">Username</label>
+            <input class = "unos" type="text" placeholder="your username" name="username">
+    
+            <label class ="labela" for="password">Password</label>
+            <input class = "unos" type="password" placeholder="your password" name="password">
+    
+            <button class = "dugme" type="submit" name="submit">Log in</button>
+           
+        </form>
+
+
+
   <footer>
     <div class="container">
       <div class="row">

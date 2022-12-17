@@ -1,7 +1,7 @@
 <?php
 require "dbBroker.php";
 //session_start();
-
+require "suggest.php";
 ?>
 
 
@@ -28,15 +28,32 @@ require "dbBroker.php";
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+
+    <script src="js/sugerisi.js" type="text/javascript"></script> 
+<script type="text/javascript">
+function place(ele){
+    document.getElementById('txt').value = ele.innerHTML;
+	document.getElementById("livesearch").style.display = "none";
+}
+</script>
+
 <!--
-
-
 https://templatemo.com/tm-579-cyborg-gaming
-
 -->
+<style type="text/css"> 
+#livesearch{ 
+  margin:5px;
+  width:220px;
+  }
+#txt{
+  border: solid #A5ACB2;
+  margin:5px;
+  } 
+</style>
+
   </head>
 
-<body>
+<body onload="document.getElementById('txt').focus()">
 
   <!-- ***** Preloader Start ***** -->
   <div id="js-preloader" class="js-preloader">
@@ -59,14 +76,13 @@ https://templatemo.com/tm-579-cyborg-gaming
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
                     <a href="home.php" class="logo">
-                        <!--<img src="assets/images/logo.png" alt=""> -->
                         <h1>BOOKCLUB</h1>
                     </a>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Search End ***** -->
-                    <div class="search-input">
+                    <div class="livesearch">
                       <form id="search" action="#">
-                        <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword" onkeypress="handle" />
+                        <input type="text" placeholder="Type Something" id='txt' name="searchKeyword" onkeyup="sugestija(this.value)" />
                         <i class="fa fa-search"></i>
                       </form>
                     </div>
@@ -75,11 +91,11 @@ https://templatemo.com/tm-579-cyborg-gaming
                     <ul class="nav">
                         <li><a href="index.html" class="active">Home</a></li>
                         
-                        <li><a href="browse.html">Browse</a></li>
-                        <li><a href="details.html">Details</a></li>
-                        <li><a href="streams.html">Streams</a></li>
+                        <li><a href="browse.php">Browse</a></li>
+                        <li><a href="details.php">Details</a></li>
+                        <li><a href="#">Streams</a></li>
                         <li><a href="logout.php">Log out</a></li>
-                        <li><a href="profile.html">Profile <img src="assets/images/profilna.jpg" alt=""></a></li>
+                        <li><a href="profile.php">Profile <img src="assets/images/profilna.jpg" alt=""></a></li>
                        
                     </ul>   
                     <a class='menu-trigger'>
@@ -251,7 +267,7 @@ https://templatemo.com/tm-579-cyborg-gaming
             </div>
             <div class="col-lg-12">
               <div class="main-button">
-                <a href="profile.html">View Your Library</a>
+                <a href="profile.php">View Your Library</a>
               </div>
             </div>
           </div>
@@ -284,7 +300,37 @@ https://templatemo.com/tm-579-cyborg-gaming
   <script src="assets/js/tabs.js"></script>
   <script src="assets/js/popup.js"></script>
   <script src="assets/js/custom.js"></script>
-
+<script>
+  //ajax za browsere
+function getXMLHTTPRequest()
+{
+var request = false;
+if(window.XMLHTTPRequest)
+   {
+   request = new XMLHTTPRequest();
+   } else {
+   if(window.ActiveXObject)
+     {
+     try
+         {
+         request = new ActiveXObject("Msml2.XMLHTTP");
+         }
+     catch(err1)
+         {
+         try
+              {
+                 request = new ActiveXObject("Microsoft.XMLHTTP");
+             }
+         catch(err2)
+             {
+             request = false;
+             }
+         }
+     }
+   }
+return request;
+}
+</script>
 
   </body>
 

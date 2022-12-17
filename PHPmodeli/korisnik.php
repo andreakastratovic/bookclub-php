@@ -16,6 +16,8 @@ class Korisnik{
         $query = "SELECT * FROM bookclubusers WHERE username='$korisnik->username' AND password='$korisnik->password'";
         return $conn->query($query);
     }
+
+    
 }
 
 

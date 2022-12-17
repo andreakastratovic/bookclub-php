@@ -9,7 +9,7 @@ $conn = new mysqli($host,$user,$pass,$db);
 if (!$conn) {
 
     echo "Connection failed!";
-
+    
 }
 
 ?>
